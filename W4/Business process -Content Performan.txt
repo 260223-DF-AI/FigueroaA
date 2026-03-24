@@ -1,0 +1,50 @@
+**************Business process -Content Performance************
+
+Content Performance:
+Question 1: which shows perform the best
+Question 2: Which shows can stay or be dropped based on performance
+
+Grains of fact table:
+Watch time, Views, Ratings, show length, completion rate(of total show length), creator studio, show id, date_released, average_length
+
+Includes Content catalog, streaming events, device telemetry
+
+Source Systems: Content Catalog(MongoDB)
+
+***********Business Process - Subscription Analytics***********
+Question 1: number of subscriptions per month
+---
+
+Grains of fact table:
+Subscription Plans/Price, Account Age, Current Sub Duration / Date Subscribed, User Age, # of cancellations
+
+Source Systems: User Database, Billing System
+
+Table:
+Keys date_released datetime non-additive, creator String non-additive, average watch time Decimal (in minutes) non-additive. completion rate non-additive, rating non-additive.
+
+--------
+
+Subscriber Data:
+CREAte TABLE Subscriber_data (
+FOREIGN KEYS
+user_id int64 Non-additive, 
+plan_type String non-additive,
+date_subscribed, 
+subscription_type, 
+
+------------------
+user_age non Additive,
+Current Sub Duration Non Addtive
+Sub Revenue
+Subscription date Non additive
+)
+
+
+Show Metric one row per show
+User data - one row per user
+
+
+
+
+
